@@ -1,0 +1,59 @@
+/* components/regionPicker/regionPicker.wxss */
+.region-picker {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  width: 100%;
+  height: 560rpx;
+  background: #fff;
+}
+
+.region-picker-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2rpx solid #f6f6f6;
+}
+
+.region-picker-btn button {
+  width: 50%;
+  background: none;
+  color: #888;
+  font-size: 32rpx;
+  font-weight: normal;
+  height: 88rpx;
+  line-height: 88rpx;
+  padding: 0 30rpx;
+  text-align: left;
+}
+.region-picker-btn button:nth-child(2) {
+  color: #1aad19;
+  text-align: right;
+}
+.region-picker-btn .btn-h {
+  background: #f1f2f3;
+}
+
+.region-picker-content {
+  width: 100%;
+  height: calc(560rpx - 90rpx);
+}
+
+.region-picker-active, .region-picker-content .item {
+  height: 72rpx;
+  line-height: 72rpx;
+  font-size: 26rpx;
+  text-align: center;
+}
+
+.region-picker-mask {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 998;
+}

@@ -1,0 +1,9 @@
+<view>
+  <regionPicker id="region-picker" bind:Callback="callRegion" init-col="{{regionCol}}" init-value="{{regionInitValue}}" current-id="{{regionId}}" show="{{regionState}}"></regionPicker>
+  <view bind:tap="bindCity">
+  点击选择省市区
+  <view>
+    当前选择: {{regionData.province.name || ''}}{{regionData.city.name || ''}}{{regionData.area.name || ''}}{{regionData.town.name || ''}}
+  </view>
+  </view>
+</view>

@@ -1,0 +1,26 @@
+<!--components/regionPicker/regionPicker.wxml-->
+<view class="region-picker" wx:if="{{dialog}}">
+  <view class="region-picker-btn">
+    <button type="default" hover-class="none" bind:tap="_hide">取消</button>
+    <button type="default" hover-class="none" bind:tap="_ok">确定</button>
+  </view>
+  <picker-view class="region-picker-content" indicator-class="region-picker-active" value="{{initValue}}" bindchange="_change" >
+    <!-- 省 -->
+    <picker-view-column wx:if="{{initCol>0}}">
+      <view wx:for="{{provinceData}}" wx:key="province" class="item">{{item.name}}</view>
+    </picker-view-column>
+    <!-- 市 -->
+    <picker-view-column wx:if="{{initCol>1}}">
+      <view wx:for="{{cityData}}" wx:key="city" class="item">{{item.name}}</view>
+    </picker-view-column>
+    <!-- 区 -->
+    <picker-view-column wx:if="{{initCol>2}}">
+      <view wx:for="{{districtData}}" wx:key="district" class="item">{{item.name}}</view>
+    </picker-view-column>
+    <!-- 镇 -->
+    <picker-view-column wx:if="{{initCol>3}}">
+      <view wx:for="{{streetData}}" wx:key="street" class="item">{{item.name}}</view>
+    </picker-view-column>
+  </picker-view>
+</view>
+<view class="region-picker-mask" wx:if="{{dialog}}" bind:tap="_hide"></view>
